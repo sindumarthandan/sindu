@@ -15,18 +15,18 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@2
+      - uses: actions/checkout@v2
       - run: echo "Hello world"
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@2
+      - uses: actions/checkout@v2
       - run: echo "Hello world"
   publish:
     runs-on: ubuntu-latest
     needs: [lint, test]
     steps:
-      - uses: actions/checkout@2
+      - uses: actions/checkout@v2
       - run: echo "Hello world"
   test1:
     strategy:
@@ -34,5 +34,5 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: $
     steps:
-      - uses: actions/checkout@2
+      - uses: actions/checkout@v2
       - run: echo "Hello world"
